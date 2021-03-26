@@ -6,21 +6,21 @@ import LogItem from './LogItem'
 const App = () => {
 	const [logs, setLogs] =useState([
 		{
-			id: 1,
+			_id: 1,
 			text: "This is log one",
 			priority: 'low',
 			user: 'James',
 			created: new Date().toString()
 		},
 		{
-			id: 2,
+			_id: 2,
 			text: "This is log two",
 			priority: 'moderate',
 			user: 'James',
 			created: new Date().toString()
 		},
 		{
-			id: 3,
+			_id: 3,
 			text: "This is log three",
 			priority: 'high',
 			user: 'James',
@@ -41,7 +41,7 @@ const App = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{logs.map( (log) =>  <LogItem/>)}
+					{logs.map( (log) =>  <LogItem key={log._id} log={log}/>)}
 				</tbody>
 			</Table>
 		</Container>

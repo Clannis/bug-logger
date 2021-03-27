@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
+import AddLogItem from './AddLogItem'
 import LogItem from './LogItem'
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
 
 	return (
 		<Container>
+			<AddLogItem />
 			<Table>
 				<thead>
 					<tr>

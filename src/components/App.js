@@ -11,7 +11,7 @@ const App = () => {
 		message: '',
 		variant: 'success'
 	})
-	const [logs, setLogs] =useState([
+	const [logs, setLogs] = useState([
 		{
 			_id: 1,
 			text: "This is log one",

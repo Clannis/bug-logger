@@ -94,6 +94,17 @@ ipcMain.on('logs:add', async (e, item) => {
 	}
 })
 
+// Delete Log
+
+ipcMain.on('logs:delete', async (e, _id) => {
+	try {
+		await Log.findOneAndDelete({_id: _id})
+		sendLogs()
+	} catch (err) {
+		console.log(err)
+	}
+})
+
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit()
